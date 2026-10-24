@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Little Kitchen: Cooking Simulator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="toast" role="status"></div>
+
+<section id="start" class="screen">
+  <h1>Little Kitchen</h1>
+  <p class="sub">Cooking Simulator &middot; 20 levels</p>
+  <canvas id="hero" width="320" height="200" aria-label="Freshly cooked dishes"></canvas>
+  <button id="go" class="big">START COOKING</button>
+  <div class="row"><button id="sfxT" class="tog"></button><button id="muT" class="tog"></button></div>
+</section>
+
+<section id="levels" class="screen" hidden>
+  <h2>Choose a recipe</h2>
+  <p class="sub" id="coins1"></p>
+  <div id="grid"></div>
+  <button id="back1" class="big alt">Back</button>
+</section>
+
+<section id="game" class="screen" hidden>
+  <header>
+    <div><b id="lvName"></b><small id="lvInfo"></small></div>
+    <div class="row"><span id="coins2"></span><button id="sfxG" class="tog sm"></button><button id="muG" class="tog sm"></button><button id="pauseB" class="tog sm">II</button></div>
+  </header>
+  <div class="bar"><i id="prog"></i></div>
+  <canvas id="stage" width="360" height="240"></canvas>
+  <ol id="steps"></ol>
+  <div id="ctl"></div>
+</section>
+
+<section id="done" class="screen" hidden>
+  <h2 id="dTitle"></h2>
+  <canvas id="dc" width="260" height="190"></canvas>
+  <div id="stars"></div>
+  <p id="dScore"></p>
+  <div class="row"><button id="again" class="big alt">Replay</button><button id="next" class="big">NEXT LEVEL</button></div>
+  <button id="toLv" class="big alt">All levels</button>
+</section>
+
+<div id="pause" hidden>
+  <div class="card"><h2>Paused</h2>
+    <button id="resume" class="big">Resume</button>
+    <button id="restart" class="big alt">Restart recipe</button>
+    <button id="quit" class="big alt">All levels</button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
